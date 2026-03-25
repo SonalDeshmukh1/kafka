@@ -22,8 +22,9 @@ runs:
   using: "composite"
   steps:
     - name: Setup Python
-      uses: actions/setup-python@v6
+      uses: ibm/setup-python-pz@main
       with:
+        architecture: s390x
         python-version: 3.12
     - name: Pip install
       shell: bash
