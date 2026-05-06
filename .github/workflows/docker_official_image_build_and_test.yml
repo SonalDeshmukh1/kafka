@@ -29,12 +29,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-s390x
     steps:
     - uses: actions/checkout@v5
     - name: Set up Python 3.10
-      uses: actions/setup-python@v6
+      uses: ibm/setup-python-pz@main
       with:
+        architecture: s390x
         python-version: "3.10"
     - name: Setup Docker Compose
       run: |
